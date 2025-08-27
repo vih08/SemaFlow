@@ -1,0 +1,91 @@
+/* Estilização geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container principal */
+.login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    width: 60px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Título */
+.title {
+    font-size: 28px;
+    color: #00a878;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+form input:focus {
+    border-color: #00a878;
+}
+
+/* Botão */
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #00a878;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #008f66;
+}
+
+/* Links */
+.links {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #00a878;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: #008f66;
+}
