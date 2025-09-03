@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +13,6 @@ body {
     min-height: 100vh;
 }
 
-/* Container principal */
 .ajuda-container {
     background-color: #ffffff;
     padding: 35px 30px;
@@ -25,21 +23,18 @@ body {
     text-align: center;
 }
 
-/* Logo */
 .logo {
     width: 180px;
     display: block;
     margin: 0 auto 10px;
 }
 
-/* Título principal */
 .title {
     font-size: 28px;
     color: #00a878;
     margin-bottom: 15px;
 }
 
-/* Texto introdutório */
 .intro {
     font-size: 15px;
     color: #333;
@@ -47,7 +42,6 @@ body {
     line-height: 1.5;
 }
 
-/* Lista de ajuda */
 .ajuda-lista {
     list-style: none;
     text-align: left;
@@ -74,7 +68,6 @@ body {
     line-height: 1.5;
 }
 
-/* Botão voltar */
 .links {
     margin-top: 15px;
 }

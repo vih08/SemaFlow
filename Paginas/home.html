@@ -6,20 +6,16 @@
     <title>Mapa Inteligente PRO</title>
     <link rel="stylesheet" href="home.css" />
 
-    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-    <!-- Leaflet Routing Machine CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
 
-    <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-    <!-- Leaflet Routing Machine JS -->
     <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
 </head>
 <body>
-    <!-- Barra de pesquisa -->
+
     <div class="search-container">
         <input type="text" id="start" placeholder="Ponto de partida" value="São Paulo" />
         <input type="text" id="end" placeholder="Destino" value="Rio de Janeiro" />
@@ -27,16 +23,13 @@
         <button id="toggleSemaforos" disabled>Mostrar Semáforos</button>
     </div>
 
-    <!-- Painel lateral -->
     <div id="side-panel">
         <h2>🚦 Status dos Semáforos</h2>
         <ul id="semaforos-list"></ul>
     </div>
 
-    <!-- Contêiner do mapa -->
     <div id="map"></div>
 
-    <!-- Script principal -->
     <script src="home.js"></script>
 </body>
 </html>

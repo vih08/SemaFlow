@@ -1,4 +1,3 @@
-/* Reset geral */
 * {
     margin: 0;
     padding: 0;
@@ -11,13 +10,11 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
-/* Mapa ocupa a tela inteira */
 #map {
     height: 100vh;
     width: 100vw;
 }
 
-/* Barra de busca */
 .search-container {
     position: absolute;
     top: 20px;
@@ -59,7 +56,6 @@ html, body {
     cursor: not-allowed;
 }
 
-/* Painel lateral */
 #side-panel {
     position: absolute;
     right: 20px;
