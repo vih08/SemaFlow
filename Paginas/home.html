@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SemaFlow - Mapa de Semáforos</title>
-    <link rel="stylesheet" href="../Paginas/home.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa Inteligente PRO</title>
+    <link rel="stylesheet" href="home.css" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Leaflet Routing Machine CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Leaflet Routing Machine JS -->
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
 </head>
 <body>
+    <!-- Barra de pesquisa -->
+    <div class="search-container">
+        <input type="text" id="start" placeholder="Ponto de partida" value="São Paulo" />
+        <input type="text" id="end" placeholder="Destino" value="Rio de Janeiro" />
+        <button id="routeBtn">Traçar rota</button>
+        <button id="toggleSemaforos" disabled>Mostrar Semáforos</button>
+    </div>
+
+    <!-- Painel lateral -->
+    <div id="side-panel">
+        <h2>🚦 Status dos Semáforos</h2>
+        <ul id="semaforos-list"></ul>
+    </div>
+
+    <!-- Contêiner do mapa -->
     <div id="map"></div>
 
-    <div class="painel">
-        <h2>SemaFlow</h2>
-        <button id="atualizar">Atualizar Semáforos</button>
-    </div>
-
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="../Paginas/home.js"></script>
-    <div class="links">
-        <a href="../index.html" class="btn-voltar">Home</a>
-    </div>
+    <!-- Script principal -->
+    <script src="home.js"></script>
 </body>
 </html>
-

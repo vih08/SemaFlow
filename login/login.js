@@ -1,44 +1,36 @@
-// Captura o formulário
-const form = document.getElementById("loginForm");
+// Captura o formulário de login
+const loginForm = document.getElementById("loginForm");
 
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
+// Quando o usuário tentar fazer login
+loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    const email = document.getElementById("email").value;
-    const senha = document.getElementById("senha").value;
+    // Pega os valores dos campos
+    const email = document.getElementById("email").value.trim();
+    const senha = document.getElementById("senha").value.trim();
 
-    if (email === "" || senha === "") {
-        alert("Por favor, preencha todos os campos.");
-    } else {
-        alert(`Bem-vindo(a), ${email}!`);
+    // Busca os usuários cadastrados no LocalStorage
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    // Procura o usuário pelo email e senha
+    const usuario = usuarios.find(user => user.email === email && user.senha === senha);
+
+    // Se o usuário não existir, avisa e bloqueia o login
+    if (!usuario) {
+        alert("Conta não encontrada! Cadastre-se primeiro.");
+        return;
     }
+
+    // Se encontrou o usuário, faz login
+    alert(`Bem-vindo(a), ${usuario.nome}!`);
+    localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
+
+    // Redireciona para a página principal
+    window.location.href = "Paginas/home.html";
 });
 
-// --- REDIRECIONAMENTOS CORRETOS ---
-
-// Esqueceu a senha → redefinir.html
-document.getElementById("linkEsqueceu").addEventListener("click", () => {
-    window.location.href = "adicionais/redefinir.html"; 
-});
-
-// Não possui conta → cadastro.html
-document.getElementById("linkCadastro").addEventListener("click", () => {
-    window.location.href = "    cadastro/cadastro.html"; 
-});
-
-// Central de ajuda → ajuda.html
-document.getElementById("linkAjuda").addEventListener("click", () => {
-    window.location.href = "adicionais/ajuda.html"; 
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("loginForm");
-
-    form.addEventListener("submit", (event) => {
-        event.preventDefault(); // Impede o envio padrão do formulário
-
-        // Aqui você poderia colocar validações de login futuramente
-        // Por enquanto, vamos só redirecionar:
-        window.location.href = "Paginas/home.html"; // Caminho do novo index
-    });
+// Botão para ir para a tela de cadastro
+document.getElementById("linkCadastro").addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = "./cadastro/cadastro.html";
 });
