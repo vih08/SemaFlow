@@ -31,7 +31,7 @@ const atualizarSemaforos = () => {
         }
     });
 
-    atualizarPainel();
+    // atualizarPainel();
     recalcularRota();
 };
 setInterval(atualizarSemaforos, 6000); // 6 segundos para mudar a cor so para testar
@@ -48,7 +48,7 @@ const gerarSemaforos = (waypoints) => {
             estado: estadoInicial
         });
     }
-    atualizarPainel();
+    // atualizarPainel();
 };
 
 const atualizarPainel = () => {

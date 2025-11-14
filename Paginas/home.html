@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mapa Inteligente PRO</title>
-    <link rel="stylesheet" href="home.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semaflow</title>
 
+    <!-- Estilo -->
+    <link rel="stylesheet" href="home.css">
+
+    <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
-
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <!-- Roteamento -->
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.min.js"></script>
 </head>
 <body>
 
     <div class="search-container">
-        <input type="text" id="start" placeholder="Ponto de partida" value="São Paulo" />
-        <input type="text" id="end" placeholder="Destino" value="Rio de Janeiro" />
+        <input id="start" type="text" placeholder="Ponto de partida">
+        <input id="end" type="text" placeholder="Destino">
         <button id="routeBtn">Traçar rota</button>
         <button id="toggleSemaforos" disabled>Mostrar Semáforos</button>
     </div>
 
     <div id="side-panel">
-        <h2>🚦 Status dos Semáforos</h2>
+        <h2>Semáforos</h2>
         <ul id="semaforos-list"></ul>
     </div>
 
